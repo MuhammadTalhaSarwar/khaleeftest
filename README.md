@@ -43,7 +43,11 @@ Logging,Performance Metrics,Health Checks and memory profiling can be used to mo
 <h3>Recommenation for hosting solution at large sale</h3>
 
 1)If monolith Architecture is followed then ensure to scale the app vertically according to the cores of machine to improve performance,availablity & better resource utilization.use load balancer like nginx to balance the load b/w multiple instances.
+1.a)Use a caching mechanism to improve the performance of the app like redis.
+
 2)If microservices Architecture is followed then ensure to scale the app horizontally using docker and use load balancer like nginx to load balance b/w multiple instances of that specifc microservice.
 2.a) Use Messagebroker or messaging Queue System like rabbitMQ,redis Streams,NATS or kakfa to communicate with other services.This ensures asynchronous processing
+2.b)Use a caching mechanism to improve the performance of the app like redis.
+
 .
 
