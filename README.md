@@ -15,7 +15,8 @@ RUN the express app using npm start command.Please ensure to change env variable
 
 
 <h3>COMMAND LINE NODE.js</h3>
-RUN the command line application using npm run cli command
+RUN the command line appli
+cation using npm run cli command
 
 ![CLINODE](images/clinode.png)
 
@@ -29,5 +30,20 @@ RUN the command line application developed using golang by executing the command
 
 ![UNITTEST](images/testcases.png)
 
+<h3>MONITORING NODE JS APPLICATION</h3>
+Logging,Performance Metrics,Health Checks and memory profiling can be used to monitor the node js app .Tools like pm2 for process management & Prometheus for monitoring and alerting can be used with open source data visualization platform like kibana for visualization and analysis of metrics data
 
+<h3>Security Measures</h3>
+1) convert to express server to https using SSL/TLS encryption.use https modules and pass ssl certifcate.
+2) use nginx to reverse proxy the node js express server
+3) use modules like helmet that helps to secure the express app by setting various HTTP headers related to security
+4) use modules like chokidar that watches files and directories for changes and triggers events when they occur.
+5) if deploying on linux environment ensure to remove root user account from a Linux machine and use a non-root user account with sudo privileges instead.
+
+<h3>Recommenation for hosting solution at large sale</h3>
+
+1)If monolith Architecture is followed then ensure to scale the app vertically according to the cores of machine to improve performance,availablity & better resource utilization.use load balancer like nginx to balance the load b/w multiple instances.
+2)If microservices Architecture is followed then ensure to scale the app horizontally using docker and use load balancer like nginx to load balance b/w multiple instances of that specifc microservice.
+2.a) Use Messagebroker or messaging Queue System like rabbitMQ,redis Streams,NATS or kakfa to communicate with other services.This ensures asynchronous processing
+.
 
