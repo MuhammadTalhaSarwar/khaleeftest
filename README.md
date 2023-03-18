@@ -17,7 +17,17 @@ RUN the express app using npm start command.Please ensure to change env variable
 <h3>COMMAND LINE NODE.js</h3>
 RUN the command line application using npm run cli command
 
+![CLINODE](images/clinode.png)
+
 <h3>COMMAND LINE golang</h3>
 RUN the command line application developed using golang by executing the commandLine.exe or by running the go run main.go command
+
+![CLIGO](images/clinode.png)
+
+
+<h3>UNIT TEST CASES</h3>
+
+![UNITTEST](images/testcases.png)
+
 
 
