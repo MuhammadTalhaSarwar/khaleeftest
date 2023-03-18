@@ -1,3 +1,5 @@
+RUN npm install & install go on your system before proceding
+
 This repository includes working solution of Software Architect Test Project,it includes the following solutions
 1) REST API solution using express server node js
 2) unit test solution using mocha and supertest Modules
