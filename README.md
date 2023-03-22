@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 This Repositry includes the following solutions
+=======
+RUN npm install & install go on your system before proceding
+
+This repository includes working solution of Software Architect Test Project,it includes the following solutions
+>>>>>>> ce011c62bede722b834356305e5c703a110f99ff
 1) REST API solution using express server node js
 2) unit test solution using mocha and supertest Modules
 3) command line application solution using node js and golang
