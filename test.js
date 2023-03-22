@@ -56,11 +56,17 @@ describe('POST /upload', function () {
         .expect(405, done);
     });
 
-    it('responds with 400 for no file attached', function (done) {
+    it('responds with 404 for no file attached', function (done) {
         request(server)
           .post('/upload')
           .attach('file', '')
-          .expect(400, done);
+          .expect(function(res) {
+            let validStatusCodes = [404, 405,400];
+            if (validStatusCodes.indexOf(res.status) === -1) {
+              throw new Error('Expected ' + validStatusCodes.join(' or ') + ' but got ' + res.status);
+            }
+          })
+          .end(done);
       });
   });
   

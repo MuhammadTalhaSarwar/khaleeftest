@@ -1,4 +1,4 @@
-This repository includes working solution of Software Architect Test Project,it includes the following solutions
+This Repositry includes the following solutions
 1) REST API solution using express server node js
 2) unit test solution using mocha and supertest Modules
 3) command line application solution using node js and golang
@@ -42,7 +42,7 @@ Logging,Performance Metrics,Health Checks and memory profiling can be used to mo
 
 <h3>Recommenation for hosting solution at large sale</h3>
 
-1)If monolith Architecture is followed then ensure to scale the app vertically according to the cores of machine to improve performance,availablity & better resource utilization.use load balancer like nginx to balance the load b/w multiple instances.
+1)If monolith Architecture is followed then ensure to scale the app vertically according to the cores of machine to improve performance,availablity & better resource utilization.use load balancer like nginx to balance the load b/w multiple instances using nginx upstream and adding a proxy_pass directive that points to the upstream
 1.a)Use a caching mechanism to improve the performance of the app like redis.
 
 2)If microservices Architecture is followed then ensure to scale the app horizontally using docker and use load balancer like nginx to load balance b/w multiple instances of that specifc microservice.

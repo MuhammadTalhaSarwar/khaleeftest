@@ -57,11 +57,6 @@ router.get("/search", (req, res) => {
         .catch((err) => {
           res.status(400).send(err.message);
         })
-        .finally(() => {
-          if (parsedConfig.NODE_ENV === "production") {
-            process.kill(process.pid, "SIGTERM"); // to kill the process after the response is sent and fork the new process
-          }
-        });
     });
   } else {
     res.status(400).send("Invalid search term.");
@@ -75,9 +70,6 @@ router.post("/upload", upload.single("file"), (req, res) => {
       success: false,
       message_code: "FILE_NOT_UPLOADED",
     });
-    if (parsedConfig.NODE_ENV === "production") {
-      process.kill(process.pid, "SIGTERM"); // to kill the process after the response is sent and fork the new process
-    }
   } else {
 
     res.status(200).json({
@@ -85,9 +77,6 @@ router.post("/upload", upload.single("file"), (req, res) => {
         message_code: "FILE_UPLOADED",
   
     });
-    if (parsedConfig.NODE_ENV === "production") {
-      process.kill(process.pid, "SIGTERM"); // to kill the process after the response is sent and fork the new process
-    }
   }
 });
 router.use((err, req, res, next) => {
